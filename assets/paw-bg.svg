@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180">
+  <defs>
+    <g id="p">
+      <ellipse cx="0" cy="5" rx="7" ry="6"/>
+      <ellipse cx="-8.5" cy="-4" rx="2.8" ry="3.6"/>
+      <ellipse cx="-3" cy="-9" rx="2.8" ry="3.6"/>
+      <ellipse cx="3" cy="-9" rx="2.8" ry="3.6"/>
+      <ellipse cx="8.5" cy="-4" rx="2.8" ry="3.6"/>
+    </g>
+  </defs>
+  <g fill="#B08A62" opacity=".13">
+    <use href="#p" transform="translate(40 50) rotate(-18)"/>
+    <use href="#p" transform="translate(62 28) rotate(-18)"/>
+    <use href="#p" transform="translate(130 140) rotate(22)"/>
+  </g>
+</svg>

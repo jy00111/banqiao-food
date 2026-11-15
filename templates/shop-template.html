@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<!--
+  店家頁模板（AGENTS.md 第 6 節）
+  使用方式：複製本檔到 shops/<id>.html，把所有 {{ }} 換成實際內容。
+  區塊順序固定：返回 → Hero → 基本資訊 → 招牌品項 → 為什麼想去 → 我的心得 → 資料來源
+-->
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{店名}}｜板橋美食口袋名單</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Huninn&family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="../assets/cat.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<!-- body 的 class 要換成 cat-<分類>，例如 cat-小吃 -->
+<body class="cat-{{分類}}">
+  <main class="wrap">
+
+    <!-- 1. 返回連結 -->
+    <a class="back" href="../index.html">← 回到口袋名單</a>
+
+    <!-- 2. Hero -->
+    <header class="shop-hero">
+      <span class="hero-emoji" aria-hidden="true">{{emoji}}</span>
+      <div>
+        <h1>{{店名}}</h1>
+        <div class="hero-tags">
+          <span class="tag cat">{{分類}}</span>
+          <span class="tag">{{價位 $ / $$ / $$$}}</span>
+          <!-- 想去：<span class="status want">🔖 想去</span>　吃過：<span class="status visited">✅ 吃過</span> -->
+          <span class="status want">🔖 想去</span>
+        </div>
+        <p class="hero-tagline">{{一句話介紹，20 字以內}}</p>
+      </div>
+    </header>
+
+    <!-- 3. 基本資訊 -->
+    <section class="section">
+      <h2>📋 基本資訊</h2>
+      <table class="info-table">
+        <tr><th>地址</th><td>{{地址}}　<a href="https://www.google.com/maps/search/?api=1&query={{URL編碼的店名+地址}}" target="_blank" rel="noopener">在地圖上開啟 ↗</a></td></tr>
+        <tr><th>交通</th><td>{{最近捷運站與步行時間}}</td></tr>
+        <tr><th>營業時間（參考）</th><td>{{營業時間與公休日}}</td></tr>
+        <tr><th>價位</th><td>{{價位等級＋參考價格}}</td></tr>
+        <tr><th>資料查證日期</th><td>{{YYYY-MM-DD}}</td></tr>
+      </table>
+    </section>
+
+    <!-- 4. 招牌品項（2～4 項） -->
+    <section class="section">
+      <h2>⭐ 招牌品項</h2>
+      <ul class="menu-list">
+        <li><span class="menu-name">{{品名}}</span><span class="menu-price">{{價格或「價格依現場」}}</span><span class="menu-desc">{{一句說明}}</span></li>
+        <li><span class="menu-name">{{品名}}</span><span class="menu-price">{{價格}}</span><span class="menu-desc">{{一句說明}}</span></li>
+      </ul>
+    </section>
+
+    <!-- 5. 為什麼想去（2～3 點，用自己的話整理） -->
+    <section class="section">
+      <h2>💡 為什麼想去</h2>
+      <ul class="reasons">
+        <li>{{理由 1}}</li>
+        <li>{{理由 2}}</li>
+      </ul>
+    </section>
+
+    <!-- 6. 我的心得 -->
+    <section class="section">
+      <h2>✍️ 我的心得</h2>
+
+      <!-- 【狀態：想去】保持這個區塊原樣 -->
+      <div class="review pending">
+        <img src="../assets/cat-peek.svg" alt="" aria-hidden="true">
+        還沒去吃，馬尼喵在等你帶牠去！吃過之後再回來補心得。
+      </div>
+
+      <!-- 【狀態：吃過】刪掉上面的 pending 區塊，改用這個（心得只能由作者提供）
+      <div class="review done">
+        <div class="review-meta">
+          <span>📅 造訪日期：{{YYYY-MM-DD}}</span>
+          <span class="stars">{{★★★★☆}}</span>
+        </div>
+        <p>{{作者提供的心得}}</p>
+      </div>
+      -->
+    </section>
+
+    <!-- 7. 資料來源（至少 1 筆） -->
+    <section class="section">
+      <h2>🔗 資料來源</h2>
+      <ol class="sources">
+        <li><a href="{{網址}}" target="_blank" rel="noopener">{{媒體名稱｜文章標題}}</a></li>
+      </ol>
+    </section>
+
+    <footer class="site-footer">營業時間與價格以店家最新公告為準。</footer>
+  </main>
+</body>
+</html>

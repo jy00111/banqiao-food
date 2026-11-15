@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 124" role="img" aria-label="探頭的馬尼喵">
+  <defs>
+    <!-- 只畫到框線（y=112）為止，框線以下藏在框裡 -->
+    <clipPath id="above"><rect x="0" y="0" width="200" height="112"/></clipPath>
+    <clipPath id="ph"><ellipse cx="100" cy="112" rx="66" ry="64"/></clipPath>
+  </defs>
+  <g clip-path="url(#above)">
+    <!-- 耳朵 -->
+    <path d="M44 76 L52 10 L94 46 Z" fill="#B08A62" stroke="#4A3B2E" stroke-width="5" stroke-linejoin="round"/>
+    <path d="M156 76 L148 10 L106 46 Z" fill="#B08A62" stroke="#4A3B2E" stroke-width="5" stroke-linejoin="round"/>
+    <path d="M57 60 L60 28 L81 45 Z" fill="#F2C4BC"/>
+    <path d="M143 60 L140 28 L119 45 Z" fill="#F2C4BC"/>
+    <!-- 頭（白底） -->
+    <ellipse cx="100" cy="112" rx="66" ry="64" fill="#FFFDF9"/>
+    <g clip-path="url(#ph)">
+      <!-- 虎斑頭頂，眼睛下方露出白毛 -->
+      <path d="M20 30 H180 V104 Q160 92 138 94 Q120 70 100 70 Q80 70 62 94 Q40 92 20 104 Z" fill="#B08A62"/>
+      <path d="M80 54 Q84 64 88 70 M100 50 V68 M120 54 Q116 64 112 70" stroke="#4A3B2E" stroke-width="5" stroke-linecap="round" fill="none"/>
+      <ellipse cx="62" cy="104" rx="9" ry="5" fill="#F2C4BC" opacity=".7"/>
+      <ellipse cx="138" cy="104" rx="9" ry="5" fill="#F2C4BC" opacity=".7"/>
+    </g>
+    <ellipse cx="100" cy="112" rx="66" ry="64" fill="none" stroke="#4A3B2E" stroke-width="5"/>
+    <!-- 眼睛 -->
+    <g stroke="#4A3B2E" stroke-width="3.5">
+      <ellipse cx="76" cy="88" rx="11" ry="12" fill="#A3A84E"/>
+      <ellipse cx="124" cy="88" rx="11" ry="12" fill="#A3A84E"/>
+    </g>
+    <ellipse cx="76" cy="89" rx="4" ry="8" fill="#2E2620"/>
+    <ellipse cx="124" cy="89" rx="4" ry="8" fill="#2E2620"/>
+    <circle cx="79" cy="84" r="2.6" fill="#fff"/>
+    <circle cx="127" cy="84" r="2.6" fill="#fff"/>
+    <!-- 鼻子 -->
+    <path d="M94 100 H106 Q106 106 100 108 Q94 106 94 100 Z" fill="#E8A598" stroke="#4A3B2E" stroke-width="2.5" stroke-linejoin="round"/>
+  </g>
+  <!-- 搭在框線上的前腳（在臉的兩側，不擋到眼睛） -->
+  <g fill="#FFFDF9" stroke="#4A3B2E" stroke-width="4">
+    <ellipse cx="38" cy="112" rx="17" ry="10"/>
+    <ellipse cx="162" cy="112" rx="17" ry="10"/>
+  </g>
+  <path d="M32 106 V113 M40 106 V113 M156 106 V113 M164 106 V113" stroke="#4A3B2E" stroke-width="2.5" stroke-linecap="round"/>
+</svg>

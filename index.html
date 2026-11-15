@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>板橋美食口袋名單</title>
+  <meta name="description" content="一本可以持續累積的板橋美食手帳：分類篩選、隨機抽一家，決定今天吃什麼。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Huninn&family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="assets/cat.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <main class="wrap">
+
+    <header class="site-header">
+      <div class="header-main">
+        <img class="mascot" src="assets/cat.svg" alt="馬尼喵">
+        <div>
+          <h1 class="site-title">板橋美食<span class="hl">口袋名單</span></h1>
+          <p class="site-sub">把想吃的板橋小店一家一家收進手帳裡。吃過的蓋上章、寫下心得；不知道吃什麼的時候，就交給馬尼喵幫你抽！</p>
+        </div>
+      </div>
+      <div class="stamp-count">
+        <strong><span id="count-visited">0</span> / <span id="count-total">0</span></strong>
+        已吃過／收藏
+      </div>
+    </header>
+
+    <section class="picker" id="picker" aria-labelledby="picker-title">
+      <img class="peek" src="assets/cat-peek.svg" alt="" aria-hidden="true">
+      <div class="picker-text">
+        <h2 id="picker-title"><img class="paw-icon" src="assets/paw.svg" alt=""> 今天吃什麼？</h2>
+        <p>馬尼喵會從目前篩選的店家中，隨機叼一家給你。</p>
+      </div>
+      <button class="btn" id="pick-btn" type="button">喵～抽一家！</button>
+      <div class="picker-result" id="picker-result" aria-live="polite"></div>
+    </section>
+
+    <section class="filters" aria-label="篩選">
+      <div class="filter-row">
+        <span class="filter-label">分類</span>
+        <div class="filter-row" id="filter-category"></div>
+      </div>
+      <div class="filter-row">
+        <span class="filter-label">狀態</span>
+        <div class="filter-row" id="filter-status"></div>
+      </div>
+    </section>
+
+    <section class="grid" id="grid" aria-label="店家列表"></section>
+    <p class="empty" id="empty">這個條件下還沒有店家，快去新增一家吧 🍽️</p>
+
+    <footer class="site-footer">
+      <img class="footer-cat" src="assets/cat.svg" alt="">
+      店家資訊整理自公開資料，營業時間與價格以店家最新公告為準。<br>
+      本站依 <code>AGENTS.md</code> 規則由 AI 協作維護。
+    </footer>
+  </main>
+
+  <script src="data/shops.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>
